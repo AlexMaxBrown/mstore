@@ -4776,6 +4776,7 @@ ul {
     width: 50%;
     min-height: 80px;
     float: left;
+    margin: 5px 0;
 }
 
 .Daxili-yadda p {
@@ -4824,6 +4825,7 @@ ul {
     width: 50%;
     height: 80px;
     float: left;
+    margin: 5px 0;
 }
 
 .feature {
