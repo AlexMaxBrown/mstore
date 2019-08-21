@@ -335,7 +335,7 @@ ul {
     line-height: 45px;
     height: 45px;
     border-right: 1px solid #efefef !important;
-    padding: 0 22px 0 22px;
+    padding: 0 20px 0 20px;
 }
 
 .sub_menu ul {
@@ -5404,7 +5404,8 @@ ul {
 }
 
 .search-block {
-    display: none;
+    display: block;
+    position: relative;
     opacity: 1;
     visibility: visible;
     transition: opacity 0.6s, visibility 0s linear 0.3s;
@@ -5415,7 +5416,7 @@ ul {
     position: absolute;
     left: 27%;
     top: 80px;
-    width: 45%;
+    width: 630px;
     opacity: 1;
     visibility: visible;
     transition: opacity 0.6s, visibility 0s linear 0.3s;
@@ -5430,9 +5431,12 @@ ul {
 }
 */
 .example {
-    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 25%;
+    width: 50%;
     height: auto;
-    margin: 0 auto 15px auto;
+    margin: 0px auto 25px auto;
     border-radius: 5px 5px;
     z-index: 999999;
 }
@@ -5792,6 +5796,14 @@ form.example::after {
     .search-block {
         display: block;
     }
+
+    .example {
+        position: static;
+        width: 100%;
+        bottom: 0%;
+        left: 0%;
+        margin: 0px auto 15px auto;
+    } 
 
     .logo-block {
         padding: 5px 0;
