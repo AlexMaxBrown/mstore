@@ -786,7 +786,7 @@
 												<div class="kredit-oplata">
 													<p class="card-name">İlkin ödəniş</p>
 													<p class="price-credit-input">
-														<input class="price-ilkin" type="text" placeholder="0" data-percent="10">
+														<input class="price-ilkin" type="text" placeholder="0" data-percent="16">
 														<span>AZN<span>
 													</p>
 												</div>
@@ -1723,8 +1723,8 @@
 				$('.price-ilkin').each(function() {
 					var val = $(this).val();
 					if(val == '') {
-						$('.kredit-menu-tab .nav-item .nav-link.active .aylig').text("0");
-						$('.kredit-menu-tab .nav-item .nav-link.active .cami').text("0");
+						$('.kredit-menu-tab .nav-item .nav-link.active .aylig').prepend("0");
+						$('.kredit-menu-tab .nav-item .nav-link.active .cami').prepend("0");
 					}
 				});
 				$('.price-ilkin').keyup(function(){
@@ -1736,24 +1736,24 @@
 					var checked_percent = $(this).data('percent');
 					var totalPrice = parseInt($(".my-price").text());
 					if (vznos == ""){
-						$(id+ ' .aylig').text("0");
-						$(id+ ' .cami').text("0");
+						$(id+ ' .aylig').html('0 <span class="currency">AZN</span>');
+						$(id+ ' .cami').html('0 <span class="currency">AZN</span>');
 					} else {
 						if(vznos.match(/^\d+$/)) {
 							fprice = totalPrice - firstVznos;
 							percent_amount = fprice + ((fprice * checked_percent)/100);
 							total = percent_amount / checked_percent;
-							$(id+ ' .aylig').text(Math.floor(total*100) /100 );
-							$(id+ ' .cami').text(fprice);
+							$(id+ ' .aylig').html(Math.floor(total*100) /100 + "<span class=\"currency\">AZN</span>" );
+							$(id+ ' .cami').html(fprice + "<span class=\"currency\">AZN</span>");
 						} else {
-							$(id+ ' .aylig').text("0");
-							$(id+ ' .cami').text("0");
+							$(id+ ' .aylig').html('0 <span class="currency">AZN</span>');
+							$(id+ ' .cami').html('0 <span class="currency">AZN</span>');
 						}
 					}
 
 					if(firstVznos >= totalPrice) {
-						$(id+ ' .aylig').text("0");
-						$(id+ ' .cami').text("0");
+						$(id+ ' .aylig').html('0 <span class="currency">AZN</span>');
+						$(id+ ' .cami').html('0 <span class="currency">AZN</span>');
 					}
 				});
 
