@@ -3,6 +3,7 @@
 body {
     background-color: #f9f9f9;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 * {
@@ -57,6 +58,19 @@ ul {
     height: auto;
 }
 
+.lang {
+    display: inline-block;
+    float: right;
+    padding: 16px 5px;
+    font-size: 14px;
+    color: #174489;
+    text-align: right;
+}
+
+.lang-active {
+    color: #d91d4b;
+}
+
 .br-radius {
     border-radius: 5px 5px;
 }
@@ -67,6 +81,18 @@ ul {
 
 .header-shadow {
     box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.05);
+}
+
+.m-icon {
+    display: none !important;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-icon svg {
+    font-size: 25px;
 }
 
 .link-menu {
@@ -90,10 +116,16 @@ ul {
     color: #a8a8a8;
 }
 
+.link-menu li a:hover {
+    color: #d91d4b;
+}
+
 .link-social {
+    display: inline-block;
     text-align: right;
+    float: right;
     padding: 14px 0;
-    margin: 0;
+    margin: 0 0 0 8px;
 }
 
 .link-social li {
@@ -103,9 +135,52 @@ ul {
 
 .link-social li a { letter-spacing: 0.5px; }
 
+.link-social li a span {
+    border: 1px solid #000000;
+    opacity: 0.2;
+    width: 28px;
+    height: 26px;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.link-social li a span svg {
+    font-size: 13px;
+    color: #000000;
+    opacity: 0.7;
+}
+
 .logo-block {
-    padding: 28px 0;
+    padding: 22px 0;
     float: left;
+}
+
+.menu {
+    display: block;
+    width: 256px;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: -256px;
+}
+
+.close-block {
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    padding: 0 10px;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.close svg {
+    color: #292929;
+    font-size: 18px;
 }
 
 .border-bottom { 
@@ -311,7 +386,7 @@ ul {
 }
 
 .menu-categori {
-    display: none;
+    display: block;
     position: relative;
     max-width: 300px;
     min-height: 40px;
@@ -546,7 +621,7 @@ ul {
 .mv_a i {
     display: inline-block;
     vertical-align: middle;
-    width: 90px;
+    width: 100px;
     color: #292929;
     font-size: 14px;
     font-weight: 600;
@@ -554,7 +629,6 @@ ul {
     font-stretch: normal;
     line-height: normal;
     text-align: left;
-    margin: 0 0 0 10px;
 }
 
 .sub_menu {
@@ -599,7 +673,7 @@ ul {
 
 .sub_col {
     float: left;
-    width: 16%;
+    width: 16.5%;
     min-height: 45px;
 }
 
@@ -649,7 +723,7 @@ ul {
 }
 
 .padding-bottom {
-    padding: 0 0 100px 0;
+    padding: 0 0 100px 0 !important;
 }
 
 /*--- Header End ---*/
@@ -701,7 +775,7 @@ ul {
 }
 
 .swiper-slide .container {
-    height: 70vh;
+    height: 380px;
 }
 
 .slider-block {
@@ -771,6 +845,27 @@ ul {
 /* --- Swiper Slider End --- */
 
 /* --- Content --- */
+
+.filtor-anchor {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 15%;
+    background: #fff;
+    border-top: 1px solid #174489;
+    border-right: 1px solid #174489;
+    border-bottom: 1px solid #174489;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+}
+
+.filtor-anchor {
+    padding: 20px 20px;
+}
+
+.filtor-anchor a svg {
+    color: #d91d4b;
+}
 
 .swiper-pagination-product {
     text-align: center;
@@ -944,6 +1039,21 @@ ul {
     background-image: url('../image/icon/to_likes_a.svg');
 }
 
+.product_icon {
+    background: url('../image/icon/heart-product.png');
+    margin: 0 5px 0 0;
+}
+
+.product_icon.active {
+    background-image: url('../image/icon/to_likes_a.svg');
+    margin: 0 5px 0 0;
+    background-repeat: no-repeat;
+}
+
+.mr {
+    margin: 10px 0;
+}
+
 .product-icon p {
     background: #d91d4b;
     width: 48px;
@@ -981,6 +1091,15 @@ ul {
     width: 100%;
     height: auto;
     text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.product-info .kredit-span-product{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    opacity: 1;
+    color: #d91d4b;
 }
 
 .product-text {
@@ -993,10 +1112,9 @@ ul {
     display: block;
     font-family: 'Montserrat', sans-serif;
     color: #a8a8a8;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.8px;
     text-align: center;
-    margin: 12px 0;
 }
 
 .product-model {
@@ -1006,6 +1124,8 @@ ul {
     color: #292929;
     font-weight: 600;
     margin: 15px 0;
+    word-wrap: break-word;
+
 }
 
 .product-price {
@@ -1044,12 +1164,22 @@ ul {
     line-height: normal;
     letter-spacing: 0.42px;
     color: #474747;
+    overflow: hidden;
+    margin: 10px 0 20px 0;
 }
 
-.faiz span {
-    background: #d91d4b;
+.faiz:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
     width: 100%;
-    height: 2px;
+	height: 2px;
+	background: #d91d4b;
+    border: solid #FFF;
+	border-width: 0 10px;
+    margin-right: -100%;
+   
 }
 
 .col-padding .faizsiz {
@@ -1162,6 +1292,15 @@ ul {
 }
 
 .bitmap-block-mini {
+    width: 100%;
+    min-height: 293px;
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-position: center bottom;
+    position: relative;
+}
+
+.bitmap-orta-block-mini {
     width: 100%;
     min-height: 293px;
     background-repeat: no-repeat; 
@@ -1476,7 +1615,7 @@ ul {
 .filter-tabs {
     width: 100%;
     height: auto;
-    padding: 27px 30px;
+    padding: 15px 30px;
     box-sizing: border-box !important;
 }
 /*
@@ -1497,6 +1636,11 @@ ul {
     margin: 0 0 15 0;
 }
 
+
+.filter-nav li .cont-checkbox{
+    float: none;
+    margin: 15px 0;
+}
 
 .filter-nav li {
 
@@ -1669,7 +1813,7 @@ ul {
 }
 
 .price-input {
-    display: inline-block;
+    display: block;
     position: relative;
 }
 
@@ -4428,11 +4572,54 @@ ul {
 }
 
 @media (max-width: 1024px) {
-    
+
 }
 
 @media (max-width: 994px) {
-    
+    .m-icon {
+        display: inline-block !important;
+    }
+
+    .product-img {
+        float: left;
+        max-width: 150px;
+        height: 185px;
+        margin: 0;
+    }
+
+    .product-info {
+        padding: 0 0;
+        margin: 0;
+    }
+
+    .countdown {
+        clear: both;
+    }
+
+    .product {
+        display: block;
+    }
+
+    .link-menu {
+        text-align: center;
+    }
+
+    .link-menu li {
+        display: block;
+        margin: 0 7px 0 0;
+    }
+
+    .link-menu li a {
+        color: #292929;
+        font-weight: 600;
+    }
+
+    .link-social {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -4518,11 +4705,8 @@ ul {
     width: 100%;
     min-height: 40px;
     padding: 5px 0;
+    margin-bottom: 15px;
     border-bottom: 1px solid #efefef; 
-}
-
-.product-info {
-    padding: 20px 0;
 }
 
 .name-product {
@@ -4539,9 +4723,10 @@ ul {
     display: block;
     text-align: right;
     float: right;
-    width: 20px;
-    height: 20px;
+    width: 27px;
+    height: 23px;
     margin: -10px 0 0 0;
+    background-repeat: no-repeat; 
 }
 
 .product_icon img {
@@ -4568,12 +4753,12 @@ ul {
 }
 
 .swiper-pagination-product-img .swiper-pagination-bullet {
-    width: 5px;
-    height: 5px;
+    width: 15px;
+    height: 15px;
     opacity: 0.15;
     background-color: #000000;
     border-radius: 50%;
-    margin: 0 3px;
+    margin: 0 5px;
     box-shadow: 0 0 14px 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -4588,7 +4773,6 @@ ul {
 }
 
 .Daxili-yadda {
-    display: inline-block;
     width: 50%;
     min-height: 80px;
     float: left;
@@ -4619,7 +4803,7 @@ ul {
     line-height: normal;
     letter-spacing: 0.36px;
     text-align: center;
-    margin: 0 10px 0 0;
+    margin: 5px 10px 5px 0;
     float: left;
 }
 
@@ -4639,8 +4823,13 @@ ul {
 .Rng {
     width: 50%;
     height: 80px;
-    display: inline-block;
     float: left;
+}
+
+.feature {
+    width: 100%;
+    min-height: 85px;
+    clear: both;
 }
 
 .Rng p {
@@ -4680,7 +4869,7 @@ ul {
 
 .block-specifications-info-table {
     width: 100%;
-    margin: 47px 0 0 0;
+    margin: 15px 0 0 0;
     clear: both;
     padding: 40px 5px 0 5px;
 }
@@ -4993,6 +5182,40 @@ ul {
     width: 100%;
 }
 
+.price-credit-input {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.price-credit-input input {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    padding: 22px 55px 22px 22px;
+    border: 2px solid #efefef !important;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    color: #474747;
+}
+
+.price-credit-input span {
+    position: absolute;
+    right: 10px;
+    bottom: 17px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.32px;
+    text-align: right;
+    opacity: 0.5;
+    color: #474747;
+}
+
 .currency {
     opacity: 0.5;
     font-size: 14px;
@@ -5182,40 +5405,58 @@ ul {
 
 .search-block {
     display: none;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
     transition: opacity 0.6s, visibility 0s linear 0.3s;
 }
 
-.search-block-show {
-    display: block;
+.search-block-icon {
+    display: flex;
+    position: absolute;
+    left: 27%;
+    top: 80px;
+    width: 45%;
     opacity: 1;
     visibility: visible;
-    transition-delay: 1s;
+    transition: opacity 0.6s, visibility 0s linear 0.3s;
 }
 
+.search-block-icon .example {
+    margin: 0;
+}
+/*
+.search-block-show {
+    display: flex;
+}
+*/
 .example {
-    width: 98%;
+    width: 100%;
     height: auto;
-    margin: 10px auto 0 auto;
+    margin: 0 auto 15px auto;
     border-radius: 5px 5px;
+    z-index: 999999;
 }
 
 .search {
     padding: 10px;
     font-size: 17px;
-    border: 1px solid grey;
+    border: 1px solid #174489;
     float: left;
-    width: 80%;
+    width: 88%;
     background: #fff;
     border-radius: 5px 0 0 5px;
 }
 
+.search::placeholder {
+  color: #174489;
+  opacity: 1; /* Firefox */
+}
+
 .search-bottom {
     float: left;
-    width: 20%;
+    width: 12%;
     padding: 10px;
-    background: #174489;
+    background: #d91d4b;
     color: white;
     font-size: 17px;
     border: 1px solid grey;
@@ -5225,7 +5466,7 @@ ul {
 }
 
 form.example .search-bottom:hover {
-  background: #d91d4b;
+  background: #174489;
 }
 
 form.example::after {
@@ -5251,12 +5492,20 @@ form.example::after {
 @media only screen and (max-width: 1231px) {
     .kredit-card-oplata {
         float: none;
-        width: 38.3%;
+        width: 37.3%;
     }
 
 }
 
 @media only screen and (max-width: 1200px) {
+
+    .bitmap-orta-block-mini {
+        background-size: 35%;
+    }
+
+    .filtor-anchor {
+        display: block;
+    }
 
     .product-info .product-text {
         font-size: 12px !important;
@@ -5349,14 +5598,10 @@ form.example::after {
     }
 
     .menu-header {
-        display: none;
+        display: block;
     }
     .wrap {
-        width: 100%;
-        float: none;
         text-align: left !important;
-        padding: 0;
-        margin: 20px 0;
     }
 
     .wrap:first-child {
@@ -5364,7 +5609,7 @@ form.example::after {
     }
 
     .menu-categori {
-        display: block;
+        display: none;
     }
     .bitmap {
         margin: 0 0 40px 0;
@@ -5395,7 +5640,18 @@ form.example::after {
     }
 }
 
+@media only screen and (max-width: 1150px) {
+    .sub_link img {
+        padding: 0 0 0 0;
+    }
+
+    .menu-header {
+        margin-bottom: 10px;
+    }
+}
+
 @media only screen and (max-width: 1140px) {
+
     .kredit-card-oplata {
         float: none;
         width: 37.3%;
@@ -5412,7 +5668,35 @@ form.example::after {
         float: none;
         width: 36.3%;
     }
+}
 
+@media only screen and (max-width: 1090px) {
+    .sub_link img {
+        padding: 0 0 0 0;
+        display: block;
+        margin: auto;
+    }
+
+    .wrap {
+        border: none;
+        border-right: none !important;
+        text-align: center !important;
+        height: auto;
+    }
+
+    .mv_a i {
+        text-align: center;
+        margin: 0;
+        width: auto;
+    }
+
+    .wrap:first-child {
+        text-align: center !important;
+    }
+
+    .wrap:last-child {
+        text-align: center !important;
+    }
 }
 
 @media only screen and (max-width: 1065px) {
@@ -5422,8 +5706,35 @@ form.example::after {
     }
 
 }
+/*
+@media only screen and (max-width: 1366px) and (min-height: 1024px)  {
+    .search-block-icon {
+        top: 7.5%;
+    }
+    .swiper-slide .container {
+        height: 40vh;
+    }
+}
 
+@media only screen and (max-width: 1024px) and (min-height: 1366px)  {
+    .search-block-icon {
+        top: 5.5%;
+    }
+    .swiper-slide .container {
+        height: 25vh;
+    }
+}
+*/
 @media only screen and (max-width: 1024px) {
+    /*
+    .swiper-slide .container {
+        height: 55vh;
+    }
+    */
+    .logo-block {
+        padding: 20px 0;
+        float: left;
+    }
     .footer-blog {
         min-height: 182px;
         box-sizing: border-box;
@@ -5439,11 +5750,11 @@ form.example::after {
     .kredit-menu-tab .nav-tabs .nav-item {
         margin-right: 4px;
     }
-
+    /*
     .product-info {
         padding: 20px 0 0 0;
     }
-
+    */
     .faizsiz {
         font-size: 11px;
         padding: 8px 8px;
@@ -5455,6 +5766,48 @@ form.example::after {
 }
 
 @media only screen and (max-width: 994px) {
+
+    .bitmap-orta-block-mini {
+        background-size: 41%;
+    }
+
+    .search-block-icon {
+        display: none;
+    }
+
+    .lang-block {
+        width: 103px;
+        margin: auto;
+    }
+
+    .bitmap-block {
+        background-size: 85%;
+        background-position: bottom;
+    }
+    
+    .kredit-block .tab-content {
+        margin: 10px 0 0 0;
+    }
+
+    .search-block {
+        display: block;
+    }
+
+    .logo-block {
+        padding: 5px 0;
+    }
+
+    .block-buttom-header {
+        padding: 10px 0;
+    }
+
+    .soc-menu-block {
+        display: none;
+    }
+
+    .search-icon {
+        display: none;
+    }
 
     .kredit-card-oplata {
         float: none;
@@ -5469,13 +5822,14 @@ form.example::after {
     .kredit-card-oplata {
         float: none;
     }
-
+    /*
     .swiper-slide .container {
-        height: 100vh;
+        height: 60vh;
     }
+    */
 
     .product-info {
-        padding: 20px 0;
+        /*padding: 20px 0;*/
         margin: 0;
     }
     .order {
@@ -5526,6 +5880,12 @@ form.example::after {
     }
 }
 
+@media only screen and (max-width: 940px) {
+    .wrap {
+        padding: 0;
+    }
+}
+
 @media only screen and (max-width: 972px) {
     .kredit-card-oplata {
         float: none;
@@ -5539,6 +5899,26 @@ form.example::after {
         width: 41.6%;
     }
     
+}
+
+@media only screen and (max-width: 812px) {
+    /*
+    .swiper-slide .container {
+        height: 75vh;
+    }
+    */
+}
+
+@media only screen and (max-width: 768px) {
+    .mv_a i {
+        font-size: 12px;
+    }
+    .my-cart .sum  {
+        right: 10px;
+    }
+    .bitmap-orta-block-mini {
+        background-size: 55%;
+    }
 }
 
 @media only screen and (max-width: 760px) {
@@ -5575,11 +5955,28 @@ form.example::after {
     .kredit-card-oplata {
         width: 38.6%;
     }
+    .mv_a i {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mv_a i {
+        font-size: 11px;
+    }
 }
 
 @media only screen and (max-width: 544px) {
+    
+    .bitmap-orta-block-mini {
+        background-size: 75%;
+    }
+    
     .kredit-card-oplata {
         width: 35.6%;
+    }
+    .mv_a i {
+        font-size: 10px;
     }
 }
 
@@ -5596,11 +5993,11 @@ form.example::after {
         font-size: 1rem;
         line-height: 1.5;
     }
-
+    /*
     .swiper-slide .container {
-        height: 50vh;
+        height: 45vh;
     }
-
+    */
     .product-info .faizsiz {
         font-size: 14px !important;
     }
@@ -5625,7 +6022,7 @@ form.example::after {
     }
 
     .logo-block {
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     .block-buttom-header {
@@ -5637,16 +6034,23 @@ form.example::after {
     }
 
     .link-menu {
+        text-align: left;
+    }
+
+    .menu .link-menu {
         text-align: center;
     }
 
     .link-social {
+        text-align: right;
+    }
+
+    .menu .link-social {
         text-align: center;
     }
 
     .logo-block {
         float: none;
-        text-align: center;
     }
 
     .filter {
@@ -5655,13 +6059,13 @@ form.example::after {
 
     .block-buttom-header {
         float: none;
-        text-align: center;
+        text-align: right;
     }
-
+    /*
     .widget_shopping_cart_content {
         left: -100%;
     }
-
+    */
     .bg-block {
         display: block !important;
     }
@@ -5727,8 +6131,13 @@ form.example::after {
 }
 
 @media only screen and (max-width: 736px) {
+    /*
     .swiper-slide .container {
-        height: 100vh;
+        height: 75vh;
+    }
+    */
+    .slider-text {
+        min-height: 185px;
     }
 }
 
@@ -5744,13 +6153,53 @@ form.example::after {
     .padding-count {
         padding: 20px 10px;
     }
+    .my-cart .sum {
+        right: 8px;
+    }
+}
+
+@media only screen and (max-width: 667px){
+    /*
+    .swiper-slide .container {
+        height: 75vh;
+    }
+    */
 }
 
 @media only screen and (max-width: 640px) {
 
+    .my-cart .sum {
+        right: 8px;
+    }
+
+    .slider-block h2 {
+        font-size: 18px;
+    }
+
+    .slider-block p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .slider-link-one {
+        margin: 13px 0 0 0;
+    }
+
+    .slider-block {
+        min-height: 200px;
+    }
+
+    .slider-text {
+        min-height: 140px;
+    }
+
 }
 
 @media only screen and (max-width: 584px) {
+    .container-fluid {
+        padding: 0;
+    }
+
     .nav-tabs .nav-link.active {
         padding: 18px 10px;
         font-size: 12px;
@@ -5763,27 +6212,36 @@ form.example::after {
     .kredit-card-oplata {
         width: 37.6%;
     }
-}
-
-@media only screen and (max-width: 584px) {
     .kredit-card-oplata {
         width: 36.6%;
     }
 }
 
 @media only screen and (max-width: 568px) {
+    .m-header-icon {
+        margin: 0 0 0 12px;
+    }
+
     .rectangle-border {
         border: none;
     }
     .padding-count {
         padding: 20px 10px;
     }
+    /*
     .swiper-slide .container {
-        height: 100vh;
+        height: 75vh;
+    }
+    */
+    .my-cart {
+        width: 140px;
     }
 }
 
 @media only screen and (max-width: 510px) {
+    .m-header-icon {
+        margin: 0 0 0 6px;
+    }
     .pagination-lg .page-link {
         padding: .6rem 0.8rem;
         font-size: 1rem;
@@ -5794,7 +6252,62 @@ form.example::after {
     }
 }
 
+@media only screen and (max-width: 505px) {
+    .kredit-oplata {
+        width: 32%;
+    }
+    .m-header-icon {
+        margin: 0 0 0 3px;
+    }
+}
+
 @media only screen and (max-width: 414px) {
+
+    .bitmap-text-block {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bitmap-block {
+        background-size: 100%;
+        background-position: bottom;
+    }
+
+    .m-header-icon {
+        margin: 0 0 0 7px;
+    }
+
+    .logo-block {
+        padding: 14px 0;
+    }
+
+    .mv_a i {
+        font-size: 8px;
+    }
+
+    .my-cart {
+        width: 105px;
+        font-size: 13px;
+        padding: 8px 8px;
+
+    }
+
+    .my-cart img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .my-cart .sum {
+        right: 0px;
+        padding: 2px 2px;
+        min-width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+
+    .search-icon {
+        display: none;
+    }
 
     .card-kredit-info-block {
         margin: 8px 0;
@@ -5812,11 +6325,11 @@ form.example::after {
         width: 65px;
         font-size: 15px;
     }
-
+    /*
     .swiper-slide .container {
-        height: 60vh;
+        height: 40vh;
     }
-
+    */
     .specifications-table tbody tr td:last-child {
         padding-left: 10px;
     }
@@ -5830,10 +6343,22 @@ form.example::after {
 
 @media only screen and (max-width: 411px) {
 
-    .swiper-slide .container {
-        height: 50vh;
+    .m-header-icon {
+        margin: 0 0 0 7px;
     }
 
+    .logo-block img {
+        width: 100%;
+    }
+
+    .m-header-icon {
+        margin: 0 0 0 6px;
+    }
+    /*
+    .swiper-slide .container {
+        height: 35vh;
+    }
+    */
     .kredit-menu-tab .nav-tabs .nav-item {
         width: 23%;
     }
@@ -5875,10 +6400,36 @@ form.example::after {
 
 @media only screen and (max-width: 375px) {
 
-    .swiper-slide .container {
-        height: 60vh;
+    .my-cart {
+        width: 95px;
+        font-size: 13px;
+        padding: 8px 8px;
     }
 
+    .logo-block {
+        padding: 20px 0;
+    }
+
+    .logo-block img {
+        width: 100%;
+    }
+
+    .m-header-icon {
+        margin: 0 0 0 4px;
+    }
+
+    .wrap {
+        width: calc(100% / 3);
+    }
+
+    .mv_a i {
+        font-size: 10px;
+    }
+    /*
+    .swiper-slide .container {
+        height: 35vh;
+    }
+    */
     .bitmap-block-mini-text {
         font-size: 14px;
     }
@@ -5922,7 +6473,7 @@ form.example::after {
         margin-bottom: 10px;
     }
     .my-cart .sum {
-        right: 16px;
+        right: 0px;
     }
 
     .kredit-card-oplata {
@@ -5975,6 +6526,14 @@ form.example::after {
 }
 
 @media only screen and (max-width: 320px) {
+    .m-header-icon {
+        margin: 0 0 0 0px;
+    }
+    .my-cart {
+        width: 78px;
+        font-size: 11px;
+        padding: 7px 3px;
+    }
     .kredit-menu-tab .nav-tabs .nav-item {
         margin-right: 3px;
     }

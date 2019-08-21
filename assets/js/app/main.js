@@ -137,6 +137,24 @@ $ ( function () {
     function windowSize(){
         if ($(window).width() <= '1200'){
             $('.collapse').collapse('hide');
+        }else {
+            $('.collapse').collapse('show');
+        }
+        if ($(window).width() > '994') {
+            $('.menu').animate({ //выбираем класс menu и метод animate
+
+                left: '-276px' /* теперь при клике по иконке, меню, скрытое за
+               левой границей на 285px, изменит свое положение на 0px и станет видимым */
+
+            }, 200); //скорость движения меню в мс
+        }
+    }
+    $(window).on('load resize',windowSize);
+
+    /*
+    function windowSize(){
+        if ($(window).width() <= '1200'){
+            $('.collapse').collapse('hide');
             flag = 1;
         }else {
             $('.collapse').collapse('show');
@@ -168,11 +186,6 @@ $ ( function () {
             $('.menu-header').height(menu_height);
         }
     });
-
-    $( ".product-icon-heart" ).on( "click", function() {
-        var btn = $(this);
-        btn.toggleClass("active");
-    });
     $(".menu-categori").click(function(){
         $('.menu-header').toggleClass("active-block-menu");
     });
@@ -180,11 +193,17 @@ $ ( function () {
         $(".menu-header").removeAttr("style");
         $('.sub_menu').removeClass("sub_menu_active");
         $(".sub_col ul").removeClass("active-ul");
-    });
+    });*/
+    
     $(".search-icon").click(function(){
-        $('.search-block').toggleClass('search-block-show');
+        $('.search-block-icon').toggleClass('search-block-show');
     });
 
+    $( ".product-icon-heart" ).on( "click", function() {
+        var btn = $(this);
+        btn.toggleClass("active");
+    });
+    
     function height_match(target){
         var big_height = 0;
 
@@ -227,5 +246,33 @@ $ ( function () {
 		}
 		show_number.text(number);
 	});
+
+    $(".menu-icon").click(function(){
+        $('.menu').animate({ //выбираем класс menu и метод animate
+
+            left: '0px' /* теперь при клике по иконке, меню, скрытое за
+               левой границей на 285px, изменит свое положение на 0px и станет видимым */
+
+        }, 200); //скорость движения меню в мс
+    });
+
+    $(".close").click(function(){
+        $('.menu').animate({ //выбираем класс menu и метод animate
+
+            left: '-276px' /* теперь при клике по иконке, меню, скрытое за
+               левой границей на 285px, изменит свое положение на 0px и станет видимым */
+
+        }, 200); //скорость движения меню в мс
+    });
+
+    $('.anchor').click(function(){
+
+        //Сохраняем значение атрибута href в переменной:
+
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top}, 1800);
+        return false;
+
+    });
 
 });
