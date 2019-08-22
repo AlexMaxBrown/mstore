@@ -4,10 +4,25 @@ body {
     background-color: #f9f9f9;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    padding-right:0 !important;
 }
 
 * {
     box-sizing: border-box;
+}
+
+.modal-open .modal {
+    overflow-x: hidden !important;
+}
+
+.modal-open {
+    overflow-x: hidden !important;
+    padding-right: 0 !important;
+}
+
+.modal-open {
+  overflow:auto;
+  padding-right:0 !important;
 }
 
 a {
@@ -212,6 +227,7 @@ ul {
     border-radius: 30px 30px;
     font-weight: 600;
     position: relative;
+    text-align: center;
 }
 
 .my-cart:hover {
@@ -232,7 +248,7 @@ ul {
     margin: 0;
     position: absolute;
     top: 2px;
-    right: 24px;
+    right: 10%;
 }
 
 .cart-count {
@@ -481,7 +497,7 @@ ul {
     visibility: hidden;
     margin-top: 35px;
     border-radius: 7px 7px;
-    z-index: 9999;
+    z-index: 999999999999;
 }
 
 .widget_shopping_cart_content .cart_list {
@@ -560,7 +576,7 @@ ul {
     margin-top: 6px;
     visibility: visible;
     display: block;
-    opacity: 9999;
+    opacity: 99999999999;
 }
 
 
@@ -646,7 +662,7 @@ ul {
     text-align: center;
     visibility: hidden;
     opacity: 0;
-    padding: 20px 25px;
+    padding: 20px 20px;
     transition: all .2s ease-out;
     -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
@@ -673,15 +689,22 @@ ul {
 
 .sub_col {
     float: left;
-    width: 20%;
+    min-width: 160px;
     min-height: 45px;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+
+.sub_col:last-child {
+    margin-left: 0;
 }
 
 .sub_col h3 {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
-    margin: 0 0 10px;
+    margin: 10px 0 10px 0;
     display: block;
+    font-size: 16px;
 }
 
 .sub_col h3 a {
@@ -708,7 +731,7 @@ ul {
 
 .t_cols {
     /*overflow: hidden;*/
-    max-width: 360px;
+    max-width: 315px;
 }
 
 .sub_col ul li {
@@ -1630,20 +1653,19 @@ ul {
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 0.58px;
+    margin-bottom: 10px;
 }
 
 .filter-tabs h5 {
     margin: 0 0 15 0;
 }
 
+.filter-nav li {
+    height: 30px;
+}
 
 .filter-nav li .cont-checkbox{
     float: none;
-    margin: 15px 0;
-}
-
-.filter-nav li {
-
 }
 
 .filter-nav li a {
@@ -1770,7 +1792,6 @@ ul {
 
 .filter-price-form {
     width: 100%;
-    margin-top: 18px;
 }
 
 .filter-price-form span {
@@ -1877,7 +1898,7 @@ ul {
 }
 
 .woocommerce .woocommerce-cart-form .shop_table thead tr th {
-    font-weight: 400;
+    font-weight: 600;
     padding: 15px 20px
 }
 
@@ -3298,7 +3319,7 @@ ul {
     background: #f1593c;
     color: #fff;
     font-size: 1em;
-    font-weight: 400
+    font-weight: 600;
 }
 
 .woocommerce .cart-collaterals .related,
@@ -3715,6 +3736,10 @@ ul {
 .select2-dropdown,
 .select2-container--default .select2-search--dropdown .select2-search__field {
     border: 1px solid #e6e6e6!important
+}
+
+.form-group label {
+    font-weight: 600;
 }
 
 @media screen and (max-width: 767px) {
@@ -4568,7 +4593,8 @@ ul {
 }
 
 .with {
-    width: auto!important
+    width: auto!important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 1024px) {
@@ -4646,6 +4672,22 @@ ul {
 .form-textarea {
     width: 100%;
     padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.btn-warning {
+    background:#d91d4b !important;
+    border: 1px solid #d91d4b !important;
+    font-weight: 600;
+    color: #fff !important;
+}
+
+.btn-warning:hover {
+    background: #174489 !important;
+    font-weight: 600;
+    border: 1px solid #174489 !important;
+    color: #fff !important;
 }
 
 .section-headline {
@@ -5162,8 +5204,21 @@ ul {
 
 .kredit-oplata {
     display: inline-block;
-    width: 32.7%;
+    width: 24.2%;
     margin: 0 0 0 0;
+}
+
+.kredit-forma {
+    width: 100%;
+    padding: 17px 0;
+    border-radius: 5px 5px;
+    font-weight: 600;
+    background: #d91d4b;
+    border: 1px solid #d91d4b ;
+}
+
+.kredit-forma:hover {
+    background: #174489;
 }
 
 .card-kredit-info-block {
@@ -5171,7 +5226,7 @@ ul {
     height: 60px;
     background-color: #fafafa;
     border-radius: 5px;
-    padding: 20px 22px;
+    padding: 20px 20px;
 }
 
 .card-kredit-price {
@@ -5208,8 +5263,8 @@ ul {
 
 .price-credit-input span {
     position: absolute;
-    right: 10px;
-    bottom: 17px;
+    right: 14px;
+    bottom: 18px;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.32px;
@@ -5669,6 +5724,16 @@ form.example::after {
 
 }
 
+@media only screen and (max-width: 1110px) {
+    .card-kredit-info-block {
+        padding: 20px 10px;
+    }
+
+    .price-credit-input input {
+        padding: 22px 55px 22px 10px;
+    }
+}
+
 @media only screen and (max-width: 1097px) {
     .kredit-card-oplata {
         float: none;
@@ -5772,6 +5837,10 @@ form.example::after {
 }
 
 @media only screen and (max-width: 994px) {
+
+    .card-kredit-info-block {
+        padding: 20px 10px;
+    }
 
     .bitmap-orta-block-mini {
         background-size: 41%;
@@ -5927,9 +5996,10 @@ form.example::after {
     .mv_a i {
         font-size: 12px;
     }
+    /*
     .my-cart .sum  {
         right: 10px;
-    }
+    }*/
     .bitmap-orta-block-mini {
         background-size: 55%;
     }
@@ -5962,6 +6032,7 @@ form.example::after {
         width: 100% !important;
         float: left !important;
         margin: 15px 0 !important;
+        border: none !important;
     }
 }
 
@@ -6167,9 +6238,10 @@ form.example::after {
     .padding-count {
         padding: 20px 10px;
     }
+    /*
     .my-cart .sum {
         right: 8px;
-    }
+    }*/
 }
 
 @media only screen and (max-width: 667px){
@@ -6232,6 +6304,11 @@ form.example::after {
 }
 
 @media only screen and (max-width: 568px) {
+
+    .card-kredit-info-block {
+        padding: 20px 10px;
+    }
+
     .m-header-icon {
         margin: 0 0 0 12px;
     }
@@ -6269,6 +6346,10 @@ form.example::after {
 @media only screen and (max-width: 505px) {
     .kredit-oplata {
         width: 32%;
+    }
+    .kredit-oplata:last-child {
+        width: 100%;
+        margin: 10px 0;
     }
     .m-header-icon {
         margin: 0 0 0 3px;
@@ -6357,6 +6438,10 @@ form.example::after {
 
 @media only screen and (max-width: 411px) {
 
+    .kredit-oplata {
+        width: 100%;
+    }
+
     .m-header-icon {
         margin: 0 0 0 7px;
     }
@@ -6366,7 +6451,7 @@ form.example::after {
     }
 
     .m-header-icon {
-        margin: 0 0 0 6px;
+        margin: 0 0 0 4px;
     }
     /*
     .swiper-slide .container {
@@ -6374,7 +6459,7 @@ form.example::after {
     }
     */
     .kredit-menu-tab .nav-tabs .nav-item {
-        width: 23%;
+        width: 24%;
     }
 
     .view-slider .views-field-view-node-eng a {
@@ -6414,10 +6499,20 @@ form.example::after {
 
 @media only screen and (max-width: 375px) {
 
+    .widget_shopping_cart_content {
+        transform: translateX(9%);
+    }
+
+    .kredit-menu-tab .nav-tabs .nav-item {
+        margin-right: 3px;
+        width: 24.1% !important;
+    }
+
     .my-cart {
-        width: 95px;
+        width: 97px;
         font-size: 13px;
         padding: 8px 8px;
+        text-align: center;
     }
 
     .logo-block {
@@ -6429,7 +6524,7 @@ form.example::after {
     }
 
     .m-header-icon {
-        margin: 0 0 0 4px;
+        margin: 0 0 0 2px;
     }
 
     .wrap {
@@ -6505,6 +6600,11 @@ form.example::after {
 
 @media only screen and (max-width: 360px) {
 
+    .widget_shopping_cart_content {
+        right: 50%;
+        transform: translateX(24%);
+    }
+
     .my-cart {
         width: 87px;
         font-size: 13px;
@@ -6547,6 +6647,24 @@ form.example::after {
 }
 
 @media only screen and (max-width: 320px) {
+
+    .widget_shopping_cart_content .cart_list .mini_cart_item .remove_from_cart_button {
+        right: 0%;
+    }
+
+    .widget_shopping_cart_content {
+        right: 55%;
+    }
+
+    .widget_shopping_cart_content {
+        min-width: 290px;
+    }
+
+    .mini-cart_buttons-link {
+        margin: 6px 10px;
+        display: block;
+    }
+
     .m-header-icon {
         margin: 0 0 0 0px;
     }

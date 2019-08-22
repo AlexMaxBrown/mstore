@@ -228,7 +228,7 @@
 												<h2><span class="close-menu"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>Telefon və planşetlər</h2>
 												<div class="sub_col">
 													<h3><a href="catalog.html">Mobil telefonlar</a></h3>
-													<ul>
+													<ul class="t_cols">
 														<li><a href="catalog.html">Apple apple apple</a></li>
 														<li><a href="catalog.html">Samsung</a></li>
 														<li><a href="catalog.html">Honor</a></li>
@@ -281,7 +281,7 @@
 												<h2><span class="close-menu"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>Mobil telefonlar 2</h2>
 												<div class="sub_col">
 													<h3><a href="catalog.html">Mobil telefonlar 2</a></h3>
-													<ul>
+													<ul class="t_cols">
 														<li><a href="catalog.html">Apple</a></li>
 														<li><a href="catalog.html">Samsung</a></li>
 														<li><a href="catalog.html">Honor</a></li>
@@ -335,7 +335,7 @@
 												<h2><span class="close-menu"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>Kompyuter hissələri</h2>
 												<div class="sub_col">
 													<h3><a href="catalog.html">Mobil telefonlar</a></h3>
-													<ul>
+													<ul class="t_cols">
 														<li><a href="catalog.html">Apple</a></li>
 														<li><a href="catalog.html">Samsung</a></li>
 														<li><a href="catalog.html">Honor</a></li>
@@ -388,7 +388,7 @@
 												<h2><span class="close-menu"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>Kompyuter avadanlıqları</h2>
 												<div class="sub_col">
 													<h3><a href="catalog.html">Mobil telefonlar</a></h3>
-													<ul>
+													<ul class="t_cols">
 														<li><a href="catalog.html">Apple</a></li>
 														<li><a href="catalog.html">Samsung</a></li>
 														<li><a href="catalog.html">Honor</a></li>
@@ -441,7 +441,7 @@
 												<h2><span class="close-menu"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>Aksesuarlar</h2>
 												<div class="sub_col">
 													<h3><a href="catalog.html">Mobil telefonlar</a></h3>
-													<ul>
+													<ul class="t_cols">
 														<li><a href="catalog.html">Apple</a></li>
 														<li><a href="catalog.html">Samsung</a></li>
 														<li><a href="catalog.html">Honor</a></li>
@@ -494,7 +494,7 @@
 												<h2><span class="close-menu"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>Digər</h2>
 												<div class="sub_col">
 													<h3><a href="catalog.html">Mobil telefonlar</a></h3>
-													<ul>
+													<ul class="t_cols">
 														<li><a href="catalog.html">Apple</a></li>
 														<li><a href="catalog.html">Samsung</a></li>
 														<li><a href="catalog.html">Honor</a></li>
@@ -543,6 +543,51 @@
 					</div>
 	            </div>
 	        </header>
+
+			<div class="modal fade kredit-forma-modal" id="kredit-forma6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+								<form>
+								<div class="row">
+									<div class="col-lg-12 my-2">
+										<div class="form-group">
+											<label for="exampleFormControlInput1">Adı</label>
+											<input type="text"  class="form-control" id="exampleFormControlInput1" placeholder="Adı">
+										</div>
+									</div>
+									<div class="col-lg-12 my-2">
+										<div class="form-group">
+											<label for="exampleFormControlInput1">Telefon</label>
+											<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Telefon">
+										</div>
+									</div>
+									<div class="col-lg-12 my-2">
+										<div class="form-group">
+											<label for="exampleFormControlInput1">E-mail</label>
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail">
+										</div>
+									</div>
+									<div class="col-lg-12 my-2">
+										<div class="form-group">
+											<label for="exampleFormControlInput1">Ünvan</label>
+											<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ünvan">
+										</div>
+									</div>
+									<div class="col-lg-12 text-center my-2">
+										<button type="submit" class="btn btn-warning">Göndər</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<section class="container-fluid rectangle-header">
 				<div class="container bg-color-header br-radius padding-count">
@@ -655,7 +700,6 @@
 								</div>
 								-->
 								
-
 								<div class="block-specifications-info-table">
 									<table class="specifications-table">
 										<tbody>
@@ -800,6 +844,11 @@
 														</p>
 													</div>
 												</div>
+												<div class="kredit-oplata">
+													<button type="button" class="btn btn-primary kredit-forma" data-toggle="modal" data-target=".kredit-forma-modal">
+  														Ödəniş
+													</button>
+												</div>
 											</div>
 										</div>
 										<div class="row mb-2">
@@ -833,6 +882,11 @@
 															<span class="currency">AZN</span>
 														</p>
 													</div>
+												</div>
+												<div class="kredit-oplata">
+													<button type="button" class="btn btn-primary kredit-forma" data-toggle="modal" data-target=".kredit-forma-modal">
+  														Ödəniş
+													</button>
 												</div>
 											</div>
 										</div>
@@ -869,6 +923,11 @@
 														</p>
 													</div>
 												</div>
+												<div class="kredit-oplata">
+													<button type="button" class="btn btn-primary kredit-forma" data-toggle="modal" data-target=".kredit-forma-modal">
+  														Ödəniş
+													</button>
+												</div>
 											</div>
 										</div>
 										<div class="row mb-2">
@@ -902,6 +961,11 @@
 															<span class="currency">AZN</span>
 														</p>
 													</div>
+												</div>
+												<div class="kredit-oplata">
+													<button type="button" class="btn btn-primary kredit-forma" data-toggle="modal" data-target=".kredit-forma-modal">
+  														Ödəniş
+													</button>
 												</div>
 											</div>
 										</div>
@@ -938,6 +1002,11 @@
 														</p>
 													</div>
 												</div>
+												<div class="kredit-oplata">
+													<button type="button" class="btn btn-primary kredit-forma" data-toggle="modal" data-target=".kredit-forma-modal">
+  														Ödəniş
+													</button>
+												</div>
 											</div>
 										</div>
 										<div class="row mb-2">
@@ -971,6 +1040,11 @@
 															<span class="currency">AZN</span>
 														</p>
 													</div>
+												</div>
+												<div class="kredit-oplata">
+													<button type="button" class="btn btn-primary kredit-forma" data-toggle="modal" data-target=".kredit-forma-modal">
+  														Ödəniş
+													</button>
 												</div>
 											</div>
 										</div>
@@ -1007,6 +1081,11 @@
 														</p>
 													</div>
 												</div>
+												<div class="kredit-oplata">
+													<button type="button" class="btn btn-primary kredit-forma" data-toggle="modal" data-target=".kredit-forma-modal">
+  														Ödəniş
+													</button>
+												</div>
 											</div>
 										</div>
 										<div class="row mb-2">
@@ -1040,6 +1119,11 @@
 															<span class="currency">AZN</span>
 														</p>
 													</div>
+												</div>
+												<div class="kredit-oplata">
+													<button type="button" class="btn btn-primary kredit-forma" data-toggle="modal" data-target=".kredit-forma-modal">
+  														Ödəniş
+													</button>
 												</div>
 											</div>
 										</div>
@@ -1393,7 +1477,7 @@
 	                    </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 	                        <div class="product">
 	                            <div class="product-icon">
 	                                <a href="#">
@@ -1417,7 +1501,7 @@
 	                            </div>
 	                        </div>
 	                    </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 	                        <div class="product">
 	                            <div class="product-icon">
 	                                <a href="#">
@@ -1441,7 +1525,7 @@
 	                            </div>
 	                        </div>
 	                    </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 	                        <div class="product">
 	                            <div class="product-icon">
 	                                <p>YENİ</p>
@@ -1466,7 +1550,7 @@
 	                            </div>
 	                        </div>
 	                    </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 	                        <div class="product">
 	                            <div class="product-icon">
 	                                <a href="#">
@@ -1504,7 +1588,7 @@
 	                    </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 	                        <div class="product">
 	                            <div class="product-icon">
 	                                <a href="#">
@@ -1528,7 +1612,7 @@
 	                            </div>
 	                        </div>
 	                    </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 	                        <div class="product">
 	                            <div class="product-icon">
 	                                <a href="#">
@@ -1552,7 +1636,7 @@
 	                            </div>
 	                        </div>
 	                    </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 	                        <div class="product">
 	                            <div class="product-icon">
 	                                <p>YENİ</p>
@@ -1577,7 +1661,7 @@
 	                            </div>
 	                        </div>
 	                    </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 	                        <div class="product">
 	                            <div class="product-icon">
 	                                <a href="#">
@@ -1698,7 +1782,14 @@
         <!-- Js Include -->
         <script src="assets/js/autoload.js"></script>
 		<script>
+			/*
+			$('.modal').on('shown.bs.modal', function() {
+				$(".modal").css("padding",'0px');
+				$(".modal").css("margin",'0px');
+			});
+			*/
 			$(document).ready(function(){
+
 				var fprice = 0;
 				var percent = 0;
 				//----------------------------------------------------
