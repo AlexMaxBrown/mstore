@@ -673,7 +673,7 @@ ul {
 
 .sub_col {
     float: left;
-    width: 16.5%;
+    width: 20%;
     min-height: 45px;
 }
 
@@ -6504,6 +6504,13 @@ form.example::after {
 }
 
 @media only screen and (max-width: 360px) {
+
+    .my-cart {
+        width: 87px;
+        font-size: 13px;
+        padding: 8px 3px;
+    }
+
     .color-prodyct-select {
         margin-right: 11px;
     }
