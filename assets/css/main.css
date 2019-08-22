@@ -4865,7 +4865,7 @@ ul {
 
 .Rng {
     width: 50%;
-    height: 80px;
+    min-height: 40px;
     float: left;
     margin: 5px 0;
 }
@@ -4894,7 +4894,7 @@ ul {
     border-radius: 22px;
     padding: 4px 4px;
     float: left;
-    margin-right: 19px;
+    margin: 5px 19px 5px 0;
 }
 
 .color-prodyct-select span{
@@ -6672,6 +6672,7 @@ form.example::after {
         width: 78px;
         font-size: 11px;
         padding: 7px 3px;
+        clear: both;
     }
     .kredit-menu-tab .nav-tabs .nav-item {
         margin-right: 3px;
