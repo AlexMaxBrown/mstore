@@ -164,6 +164,17 @@ ul {
     text-align: center;
 }
 
+.link-social li a span:hover {
+    border: 1px solid #d91d4b;
+    opacity: 0.5;
+    color: #d91d4b;
+}
+
+.link-social li a span:hover svg {
+    color: #d91d4b;
+    opacity: 0.9;
+}
+
 .link-social li a span svg {
     font-size: 13px;
     color: #000000;
