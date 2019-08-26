@@ -1642,6 +1642,18 @@ ul {
     min-height: 150px;
     background: #fff;
     border-radius: 5px 5px;
+    padding: 0 8px;
+}
+
+.card-header {
+    background-color: inherit !important;
+    border: none !important;
+    padding: 10px 0 !important;
+    font-weight: 600 !important;
+}
+
+.card {
+    border: none !important;
 }
 
 [data-toggle="collapse"] i:before{

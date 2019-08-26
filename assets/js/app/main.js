@@ -186,7 +186,6 @@ $ ( function () {
 
     $(window).on('load resize',windowSize);
     
-
     /*
     function windowSize(){
         if ($(window).width() <= '1200'){
