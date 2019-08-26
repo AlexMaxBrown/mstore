@@ -93,7 +93,7 @@ $ ( function () {
             }
         }
     });
-    var swiper_two = new Swiper('.slider-product-img', {
+    var swiper_trhee = new Swiper('.slider-product-img', {
         slidesPerView: 1,
         spaceBetween: 30,
         slidesPerGroup: 1,
@@ -126,10 +126,38 @@ $ ( function () {
         }
     });
 
+    var swiper_tree = new Swiper('.sliter-3', {
+        slidesPerView: 7,
+        
+        slidesPerGroup: 1,
+        loop: false,
+        autoplay: {
+            delay: 3000,
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                
+            },
+            768: {
+                slidesPerView: 2,
+                
+            },
+            640: {
+                slidesPerView: 1,
+                
+            },
+            320: {
+                slidesPerView: 1,
+               
+            }
+        }
+    });
+    
    if ($(window).width() <= '1200'){
         $('.collapse').collapse('hide');
         flag = 1;
-    }else {
+    } else {
         $('.collapse').collapse('show');
         flag = 0;
     }
@@ -143,13 +171,21 @@ $ ( function () {
         if ($(window).width() > '994') {
             $('.menu').animate({ //выбираем класс menu и метод animate
 
-                left: '-276px' /* теперь при клике по иконке, меню, скрытое за
-               левой границей на 285px, изменит свое положение на 0px и станет видимым */
+                left: '-276px'
 
             }, 200); //скорость движения меню в мс
         }
     }
+
+    document.addEventListener('touchstart', function() {
+        $(".price-input").click(function(){
+            $(this).parents('.collapse').collapse('show');
+        });
+    }, false);
+    
+
     $(window).on('load resize',windowSize);
+    
 
     /*
     function windowSize(){
@@ -213,7 +249,7 @@ $ ( function () {
             }
         })      
 
-        $(target).height(big_height);
+        $(target).css('min-height', big_height);
     }
 
     height_match('.product-model');
