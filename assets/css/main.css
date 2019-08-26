@@ -764,8 +764,9 @@ ul {
     height: auto;
 }
 
-.swiper-wrapper {
-    box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.05);
+.slider-one {
+    box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 5px 5px;
 }
 
 .swiper-wrapper .swiper-slide {
