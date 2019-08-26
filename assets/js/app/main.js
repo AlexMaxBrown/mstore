@@ -176,13 +176,13 @@ $ ( function () {
             }, 200); //скорость движения меню в мс
         }
     }
-
+    /*
     document.addEventListener('touchstart', function() {
         $(".price-input").click(function(){
             $(this).parents('.collapse').collapse('show');
         });
     }, false);
-    
+    */
 
     $(window).on('load resize',windowSize);
     
