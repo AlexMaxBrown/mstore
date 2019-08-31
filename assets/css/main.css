@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Mitr&display=swap');
+html {
+    overflow-x: hidden !important;
+}
+
 body {
     background-color: #f9f9f9;
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     padding-right:0 !important;
 }
 
@@ -83,7 +87,8 @@ ul {
 }
 
 .lang-active {
-    color: #d91d4b;
+    color: #d91d4b !important;
+    font-weight: 600;
 }
 
 .br-radius {
@@ -104,6 +109,14 @@ ul {
 
 .menu-icon {
     cursor: pointer;
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 5px;
+    background: #292929;
+    margin: 5px;
+    display: block;
 }
 
 .menu-icon svg {
@@ -133,6 +146,12 @@ ul {
 
 .link-menu li a:hover {
     color: #d91d4b;
+    font-weight: 600;
+}
+
+.lang:hover {
+    color: #d91d4b;
+    font-weight: 600;
 }
 
 .link-social {
@@ -166,13 +185,13 @@ ul {
 
 .link-social li a span:hover {
     border: 1px solid #d91d4b;
-    opacity: 0.5;
+    opacity: 1;
     color: #d91d4b;
 }
 
 .link-social li a span:hover svg {
     color: #d91d4b;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .link-social li a span svg {
@@ -735,13 +754,16 @@ ul {
 
 .sub_col ul li a {
     font-size: 12px;
-    opacity: 0.75;
-    font-size: 12px;
+    opacity: 1;
     line-height: 1;
     letter-spacing: 0.5px;
     color: #474747;
     font-style: normal;
     font-stretch: normal;
+}
+
+.sub_col ul li a:hover {
+    color: #d91d4b;
 }
 
 .t_cols {
@@ -926,9 +948,14 @@ ul {
 }
 
 .filter-block-index {
+    display: block !important;
     max-width: 500px;
     min-height: 45px;
     margin: 20px auto 0 auto;
+}
+
+.filter-block-index .nav-item {
+    width: auto !important;
 }
 
 .filter-block-index .nav-item .nav-link {
@@ -1133,7 +1160,7 @@ ul {
     width: 100%;
     height: auto;
     text-align: center;
-    margin: 20px 0 0 0;
+    margin: 10px 0 10px 0;
     position: relative;
 }
 
@@ -1190,7 +1217,7 @@ ul {
     font-size: 13px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    opacity: 0.9;
+    opacity: 1;
     border: solid 1px #efefef;
     box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
@@ -1198,13 +1225,17 @@ ul {
     margin: 10px 0 0 0;
 }
 
+.faizsiz:hover {
+    color: #d91d4b;
+}
+
 .faiz img {
-    margin: 0 5px 0 0;
+    margin: 0 5px 3px 0;
 }
 
 .faiz {
     opacity: 0.9;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
@@ -1657,6 +1688,13 @@ ul {
     padding: 0 8px;
 }
 
+.filter-price-form-block {
+    width: 47%;
+    display: inline-block;
+    float: left;
+    margin: 0 5px 0 0;
+}
+
 .card-header {
     background-color: inherit !important;
     border: none !important;
@@ -1668,19 +1706,17 @@ ul {
     border: none !important;
 }
 
-[data-toggle="collapse"] i:before{
+
+.colaps i:before{
     font-family: 'FontAwesome';
     font-style: normal;
-    content: '\f106';
+    content: '\f107';
     float: right;
     text-align: left;
     color: grey;
     font-size: 16px;
 }
 
-[data-toggle="collapse"].collapsed i:before{
-    content: "\f107";
-}
 
 [data-toggle="collapse"]:not(.collapsed) .filter-tabs {
     border: none;
@@ -1694,7 +1730,7 @@ ul {
 .filter-tabs {
     width: 100%;
     height: auto;
-    padding: 15px 30px;
+    padding: 15px 15px;
     box-sizing: border-box !important;
 }
 /*
@@ -1744,7 +1780,7 @@ ul {
 }
 
 .tab-menu {
-    width: 100%;
+    display: inline-block;
 }
 
 .nav-tabs {
@@ -1865,9 +1901,9 @@ ul {
 
 .filter-price-form input {
     width: 100%;
-    height: 60px;
+    height: 50px;
     border-radius: 15px;
-    padding: 22px 55px 22px 22px;
+    padding: 22px 35px 22px 22px;
     border: 2px solid #efefef !important;
     outline: none ;
     font-size: 14px;
@@ -1892,14 +1928,15 @@ ul {
 .price-input {
     display: block;
     position: relative;
+    margin: 0;
 }
 
 .price-input span {
     position: absolute;
-    right: 22px;
-    top: 24.5%;
+    right: 10px;
+    top: 22%;
     opacity: 0.5;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .pagination .page-item {
@@ -4673,7 +4710,8 @@ ul {
     }
 
     .m-icon {
-        display: inline-block !important;
+        display: block !important;
+        float: right;
     }
 
     .product-img {
@@ -4730,8 +4768,12 @@ ul {
 
 @media only screen and (max-width: 768px) {
 
+    .wrap {
+        width: calc(100% / 3);
+    }
+
     .swiper-slide .container {
-        height: 285px;
+        height: 270px;
     }
 
     ul.connecticons li a i {
@@ -5137,7 +5179,7 @@ ul {
 .kredit-block {
     width: 100%;
     min-height: 80px;
-    margin: 15px 0;
+    margin: 40px 0;
 }
 
 .kredit-title-block {
@@ -5272,14 +5314,20 @@ ul {
 .kredit-card-oplata {
     display: inline-block;
     float: left;
-    width: 39.3%;
+    width: 25.5%;
     min-height: 60px;
     margin-left: 7px;
 }
 
+.card-name-pustoy {
+    width: 100%;
+    min-height: 23px;
+    margin: 0 8px 0 0;
+}
+
 .kredit-oplata {
     display: inline-block;
-    width: 24.2%;
+    width: 24%;
     margin: 0 0 0 0;
 }
 
@@ -5627,8 +5675,7 @@ form.example::after {
 
 @media only screen and (max-width: 1231px) {
     .kredit-card-oplata {
-        float: none;
-        width: 37.3%;
+        width: 25%;
     }
 
 }
@@ -5781,8 +5828,7 @@ form.example::after {
 @media only screen and (max-width: 1140px) {
 
     .kredit-card-oplata {
-        float: none;
-        width: 37.3%;
+        width: 24%;
     }
 
     .kredit-menu-tab .nav-tabs .nav-item {
@@ -5803,8 +5849,7 @@ form.example::after {
 
 @media only screen and (max-width: 1097px) {
     .kredit-card-oplata {
-        float: none;
-        width: 36.3%;
+        
     }
 }
 
@@ -5839,8 +5884,7 @@ form.example::after {
 
 @media only screen and (max-width: 1065px) {
     .kredit-card-oplata {
-        float: none;
-        width: 36%;
+        width: 23.6%;
     }
 
 }
@@ -5985,17 +6029,7 @@ form.example::after {
     }
 
     .kredit-card-oplata {
-        float: none;
-        width: 41.6%;
-    }
-
-    .kredit-card-oplata {
-        float: none;
-        width: 36.6%;
-    }
-
-    .kredit-card-oplata {
-        float: none;
+        width: 28.2%;
     }
     /*
     .swiper-slide .container {
@@ -6063,15 +6097,13 @@ form.example::after {
 
 @media only screen and (max-width: 972px) {
     .kredit-card-oplata {
-        float: none;
-        width: 42.6%;
+        
     }
 }
 
 @media only screen and (max-width: 852px) {
     .kredit-card-oplata {
-        float: none;
-        width: 41.6%;
+        width: 27.2%;
     }
     
 }
@@ -6085,6 +6117,21 @@ form.example::after {
 }
 
 @media only screen and (max-width: 768px) {
+
+    .products-tabs .nav-tabs .nav-link.active {
+        padding: 15px 15px;
+        font-size: 12px;
+    }
+
+    .products-tabs .nav-tabs .nav-link {
+        padding: 15px 15px;
+        font-size: 12px;
+    }
+
+    .products-tabs .nav-tabs .nav-item {
+        margin: 0 5px;
+    }
+
     .mv_a i {
         font-size: 11px;
     }
@@ -6102,8 +6149,7 @@ form.example::after {
 
 @media only screen and (max-width: 760px) {
     .kredit-card-oplata {
-        float: none;
-        width: 40.6%;
+        width: 26.7%;
     }
 }
 
@@ -6115,7 +6161,7 @@ form.example::after {
 
 @media only screen and (max-width: 693px) {
     .kredit-card-oplata {
-        width: 39.6%;
+        width: 25.7%;
     }
 }
 
@@ -6133,7 +6179,7 @@ form.example::after {
 
 @media only screen and (max-width: 631px) {
     .kredit-card-oplata {
-        width: 38.6%;
+        
     }
     .mv_a i {
         font-size: 10px;
@@ -6153,7 +6199,7 @@ form.example::after {
     }
     
     .kredit-card-oplata {
-        width: 35.6%;
+        
     }
     .mv_a i {
         font-size: 10px;
@@ -6194,8 +6240,10 @@ form.example::after {
         width: 100% !important;
     }
     .check-box {
-        float: none;
-        margin: 25px auto 0 auto;
+        float: right;
+        width: 125px;
+        height: 40px;
+        padding: 10px 10px;
     }
     .max-width {
         max-width: 100%;
@@ -6300,9 +6348,6 @@ form.example::after {
     .bitmap-block-mini {
         background-size: 50% 50%;
     }
-    .nav-tabs .nav-item {
-        margin: auto;
-    }
     .color-prodyct-select {
         margin-right: 15px;
     }
@@ -6374,25 +6419,47 @@ form.example::after {
 
 }
 
+@media only screen and (max-width: 590px) {
+    .check-box {
+        float: right;
+        width: 95px;
+        height: 30px;
+        line-height: 20px;
+        padding: 5px 5px;
+    }
+
+    .nav-tabs .nav-link.active {
+        padding: 10px 10px;
+        font-size: 10px;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 10px 10px;
+        font-size: 10px;
+    }
+
+    .cont-checkbox {
+        font-size: 10px;
+    }
+
+}
+
 @media only screen and (max-width: 584px) {
     .container-fluid {
         padding: 0;
     }
 
-    .nav-tabs .nav-link.active {
-        padding: 18px 10px;
-        font-size: 12px;
+    .products-tabs .nav-tabs .nav-link.active {
+        padding: 10px 5px;
+        font-size: 10px;
     }
-    .nav-tabs .nav-link {
-        padding: 10px 10px;
-        font-size: 12px;
+    .products-tabs .nav-tabs .nav-link {
+        padding: 10px 5px;
+        font-size: 10px;
     }
 
     .kredit-card-oplata {
-        width: 37.6%;
-    }
-    .kredit-card-oplata {
-        width: 36.6%;
+        width: 24.7%;
     }
 }
 
@@ -6432,11 +6499,20 @@ form.example::after {
         line-height: 1.5;
     }
     .kredit-card-oplata {
-        width: 36%;
+       
     }
 }
 
 @media only screen and (max-width: 505px) {
+
+    .filter-block-index .nav-item .nav-link {
+        font-size: 15px;
+    }
+
+    .filter-block-index .nav-tabs .nav-link.active {
+        font-size: 15px;
+    }
+
     .kredit-oplata {
         width: 32%;
     }
@@ -6449,7 +6525,42 @@ form.example::after {
     }
 }
 
+@media only screen and (max-width: 467px) {
+    .nav-tabs .nav-item {
+        margin: 0 2px;
+    }
+    .kredit-card-oplata {
+        width: 23%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .nav-tabs .nav-item {
+        margin: 0;
+    }
+}
+
 @media only screen and (max-width: 414px) {
+
+    .nav-tabs .nav-item {
+        margin: 0;
+    }
+
+    .nav-tabs .nav-link.active {
+        padding: 10px 10px;
+    }
+
+    .filter-block-index .nav-item .nav-link {
+        font-size: 16px;
+    }
+
+    .filter-block-index .nav-tabs .nav-link.active {
+        font-size: 16px;
+    }
+
+    .swiper-slide .container {
+        height: 240px;
+    }
 
     .bitmap-text-block {
         width: 100%;
@@ -6497,14 +6608,14 @@ form.example::after {
     }
 
     .card-kredit-info-block {
-        margin: 8px 0;
+        
     }
 
     .kredit-card-oplata {
-        width: 100%;
+        width: 23%;
     }
+
     .kredit-card {
-        width: 100%;
         margin:  0 0 10px 0;
     }
 
@@ -6523,23 +6634,51 @@ form.example::after {
     .kredit-menu-tab .nav-tabs .nav-item  {
         margin-right: 0;
     }
-    .nav-tabs .nav-link.active {
-        padding: 19px 10px;
-    }
 }
 
 @media only screen and (max-width: 411px) {
 
+    .products-tabs {
+        width: 100%;
+    }
+
+    .products-tabs .nav-tabs .nav-item {
+        margin: 0 0;
+        width: calc(100% / 3);
+        text-align: center;
+    }
+
+    .check-box {
+        float: none;
+        margin: 10px auto 0 auto;
+    }
+
+    .products-tabs .nav-tabs .nav-link {
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+
+    .products-tabs .nav-tabs .nav-link.active {
+        padding: 11px 5px;
+        font-size: 10px;
+    }
+
     .filter-block-index .nav-item .nav-link {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .filter-block-index .nav-tabs .nav-link.active {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .kredit-oplata {
-        width: 100%;
+        
+    }
+
+    .check-box {
+        width: 94px;
+        height: 33px;
+        padding: 5px 5px;
     }
 
     .m-header-icon {
@@ -6578,26 +6717,69 @@ form.example::after {
     .kredit-menu-tab .nav-tabs .nav-item {
         margin-right: 4px;
     }
-    .nav-tabs .nav-link.active {
-        padding: 18px 10px;
-    }
     .kredit-card-oplata {
-        width: 100%;
-        margin: 15px 0;
+        width: 23%;
     }
     .kredit-card {
         margin: 0 0 15px 0;
     }
 }
 
-@media only screen and (max-width: 393px) {
+@media only screen and (max-width: 395px) {
+    .widget_shopping_cart_content {
+        min-width: 335px;
+    }
+
+    .kredit-card-oplata {
+        width: 22%;
+    }
     .kredit-menu-tab .nav-tabs .nav-item {
         margin-right: 3px;
         width: 23.8% !important;
     }
 }
 
+@media only screen and (max-width: 384px) {
+
+    .tab-menu {
+        width: 100%;
+    }
+
+    .nav-tabs .nav-item {
+        margin: 0 0;
+        width: calc(100% / 3);
+        text-align: center;
+    }
+
+    .nav-tabs .nav-link.active {
+        padding: 10px 5px;
+    }
+
+    .check-box {
+        float: none;
+        width: 85px;
+        margin: 10px auto 0 auto;
+    }
+}
+
 @media only screen and (max-width: 375px) {
+
+    .products-tabs .nav-tabs .nav-item {
+        margin: 0 0px;
+    }
+
+    .checkmark {
+        width: 15px;
+        height: 15px;
+    }
+
+    .cont-checkbox {
+        padding-left: 20px; 
+    }
+
+    .check-box {
+        width: 85px;
+    }
 
     .product-img {
         max-width: 135px;
@@ -6641,7 +6823,7 @@ form.example::after {
     }
 
     .wrap {
-        width: calc(100% / 6);
+        width: calc(100% / 3);
     }
 
     .mv_a i {
@@ -6682,7 +6864,7 @@ form.example::after {
     }
 
     .nav-tabs .nav-link.active {
-        padding: 18px 10px;
+        padding: 10px 5px;
     }
     /*
     .bg-block .product-logo-block {
@@ -6697,31 +6879,55 @@ form.example::after {
     }
 
     .kredit-card-oplata {
+        width: 34%;
+    }
+    .kredit-card-oplata:last-child {
         width: 100%;
-        margin: 15px 0;
+        margin: 0 0 30px 0;
     }
     .kredit-card {
-        width: 100%;
-        margin: 0 0 15px 0;
+        margin: 0;
     }
     .card-img {
-        margin: 10px 0 0 0;
+        
+    }
+}
+
+@media only screen and (max-width: 364px) {
+    .filter-block-index .nav-tabs .nav-link.active {
+        font-size: 12px;
+    }
+
+    .filter-block-index .nav-item .nav-link {
+        font-size: 12px;
+    }
+
+    .filter-block-index .nav-tabs .nav-link.active {
+        padding: 10px 10px;
+    }
+
+     .filter-block-index .nav-tabs .nav-link {
+        padding: 10px 10px;
     }
 }
 
 @media only screen and (max-width: 360px) {
 
+    .kredit-card-oplata {
+        width: 33%;
+    }
+
     .filter-block-index .nav-item .nav-link {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .filter-block-index .nav-tabs .nav-link.active {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .widget_shopping_cart_content {
         right: 50%;
-        transform: translateX(24%);
+        transform: translateX(21%);
     }
 
     .my-cart {
@@ -6745,8 +6951,24 @@ form.example::after {
         padding: 16px 5px;
     }
 
+    .tab-menu {
+        width: 100%;
+    }
+
+    .products-tabs .nav-tabs .nav-item {
+        margin: 0 0;
+        width: calc(100% / 3);
+        text-align: center;
+    }
+
     .nav-tabs .nav-link.active {
-        padding: 16px 5px;
+        padding: 10px 5px;
+    }
+
+    .check-box {
+        float: none;
+        width: 85px;
+        margin: 10px auto 0 auto;
     }
 
     .block-specifications-info-table {
@@ -6756,16 +6978,38 @@ form.example::after {
     .kredit-menu-tab .nav-tabs .nav-link {
         width: 95%;
         height: 50px;
-        padding: 14px 5px;
+        padding: 10px 5px;
     }
 
     .nav-tabs .nav-link.active {
-        padding: 14px 5px;
+        padding: 10px 5px;
     }
 
 }
 
+@media only screen and (max-width: 350px) {
+    .kredit-menu-tab .nav-tabs .nav-item {
+        margin-right: 3px;
+    }
+}
+
+@media only screen and (max-width: 342px)  {
+    .kredit-card-oplata {
+        width: 32%;
+    }
+}
+
+@media only screen and (max-width: 324px)  {
+    .kredit-card-oplata {
+        width: 31%;
+    }
+}
+
 @media only screen and (max-width: 320px) {
+
+    .kredit-card-oplata {
+        
+    }
 
     .kredit-span-product span {
         font-size: 0.7rem;
@@ -6857,6 +7101,12 @@ form.example::after {
 
     .kredit-menu-tab .nav-tabs .nav-link {
         font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 294px)  {
+    .kredit-card-oplata {
+        width: 29%;
     }
 }
 

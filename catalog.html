@@ -19,6 +19,17 @@
 						<i class="fa fa-times" aria-hidden="true"></i>
 					</p>
 				</div>
+				<ul class="lang-block">
+					<li>
+						<a href="#" class="lang">ENG</a>
+					</li>
+					<li>
+						<a href="#" class="lang">RU</a>
+					</li>
+					<li>
+						<a href="#" class="lang lang-active">AZ</a>
+					</li>
+				</ul>
 				<ul class="link-menu">
 					<li><a href="shops.html">Dükanlar</a></li>
 					<li><a href="career.html">Karyera</a></li>
@@ -56,8 +67,7 @@
 					</li>
 				</ul>
 			</div>
-
-            <header class="container-fluid bg-color-header header-shadow">
+			<header class="container-fluid bg-color-header header-shadow">
 	            <div class="container max-width">
 	                <div class="row soc-menu-block">
 						<div class="col-lg-6 col-md-6">
@@ -114,14 +124,22 @@
 						<hr class="border-bottom"/>
 	                </div>
 	                <div class="row">
-	                    <div class="col-6">
+	                    <div class="col-5">
 	                        <div class="logo-block">
 	                            <a href="index.html">
 	                                <img src="assets/img/logo.png" class="logo">
 	                            </a>
 	                        </div>
 	                    </div>
-	                    <div class="col-6">
+						<!--
+						<div class="search-block-icon">
+							<form class="example" action="#" method="#">
+								<input class="search" type="text" placeholder="Search.." name="search">
+								<button class="search-bottom" type="submit"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+						-->
+	                    <div class="col-7">
 	                        <div class="block-buttom-header">
 								<!--
 								<div class="inline-block m-header-icon">
@@ -181,7 +199,9 @@
 	                            </div>
 								<div class="inline-block m-header-icon m-icon">
 									<div class="menu-icon">
-										<i class="fa fa-bars" aria-hidden="true"></i>
+										<span></span>
+										<span></span>
+										<span></span>
 									</div>
 								</div>
 	                        </div>
@@ -196,8 +216,8 @@
 						</div>
 					</div>
 	                <div class="row">
-						<!--
 						<div class="col-lg-12">
+							<!--
 							<div class="menu-categori">
 								<a href="javascript:void(0)" class="toggler">
 									<span>
@@ -208,8 +228,8 @@
 									Məhsul Kateqoriyaları
 								</a>
 							</div>
+							-->
 						</div>
-						-->
 	                    <div class="col-lg-12">
 							
 							<div class="menu-header">
@@ -229,7 +249,7 @@
 												<div class="sub_col">
 													<h3><a href="catalog.html">Mobil telefonlar</a></h3>
 													<ul class="t_cols">
-														<li><a href="catalog.html">Apple apple apple</a></li>
+														<li><a href="catalog.html">Apple</a></li>
 														<li><a href="catalog.html">Samsung</a></li>
 														<li><a href="catalog.html">Honor</a></li>
 														<li><a href="catalog.html">Vivo</a></li>
@@ -256,6 +276,12 @@
 														<li><a href="catalog.html">Xiaomi</a></li>
 													</ul>
 												</div>
+												<div class="sub_col">
+													<h3><a href="catalog.html">DECT telefonlar</a></h3>
+													<ul>
+														<li><a href="catalog.html">Panasonic</a></li>
+													</ul>
+	                                            </div>
 												<div class="sub_col">
 													<h3><a href="catalog.html">DECT telefonlar</a></h3>
 													<ul>
@@ -318,7 +344,6 @@
 											</div>
 										</div>
 									</div>
-	
 								</div>
 								<div class="wrap">
 									
@@ -475,6 +500,12 @@
 														<li><a href="catalog.html">Panasonic</a></li>
 													</ul>
 	                                            </div>
+												<div class="sub_col">
+													<h3><a href="catalog.html">DECT telefonlar</a></h3>
+													<ul>
+														<li><a href="catalog.html">Panasonic</a></li>
+													</ul>
+	                                            </div>
 											</div>
 										</div>
 									</div>
@@ -549,18 +580,18 @@
 					<div class="row">
 						<div class="col-xl-3 col-lg-12 col-md-12">
 
-							<div id="accordion" class="filter-price-block">
+							<div id="accordion" class="filter-price-block" data-default="">
 
 								<div class="card filter-tabs">
 									<div class="card-header" id="heading0">
 										<h5 class="mb-0">
-											<button class="btn colaps p-0" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+											<button class="btn colaps p-0" data-toggle="collapse" data-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
 												Brend
-												<i class="fa-icon"></i>
+												<i class="fa-icon active"></i>
 											</button>
 										</h5>
 									</div>
-									<div id="collapse0" class="collapse show" aria-labelledby="heading0" data-parent="#accordion">
+									<div id="collapse0" class="collapse" aria-labelledby="heading0" data-parent="#accordion">
 										<ul class="filter-nav">
 											<li>
 												<label class="cont-checkbox">
@@ -623,31 +654,35 @@
 											</button>
 										</h5>
 									</div>
-									<div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#heading1">
+									<div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#heading1">
 										<form action="#" method="GET" class="filter-price-form">
-											<span>Minimal</span>
-											<p class="price-input">
-												<input type="text" name="min-prace" placeholder="0">
-												<span>AZN<span>
-											</p>
-											<span>Maksimal</span>
-											<p class="price-input">
-												<input type="text" name="min-prace" placeholder="99">
-												<span>AZN<span>
-											</p>
+											<div class="filter-price-form-block">
+												<span>Minimal</span>
+												<p class="price-input">
+													<input type="text" name="min-prace" placeholder="0">
+													<span>AZN<span>
+												</p>
+											</div>
+											<div class="filter-price-form-block">
+												<span>Maksimal</span>
+												<p class="price-input">
+													<input type="text" name="min-prace" placeholder="99">
+													<span>AZN<span>
+												</p>
+											</div>
 										</form>
 									</div>
 								</div>
 								<div class="card filter-tabs">
 									<div class="card-header" id="heading2">
 										<h5 class="mb-0">
-											<button class="btn colaps p-0" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+											<button class="btn colaps open p-0" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
 												Daxili yaddaş
 												<i class="fa-icon"></i>
 											</button>
 										</h5>
 									</div>
-									<div id="collapse2" class="collapse show" aria-labelledby="heading2" data-parent="#heading2">
+									<div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#heading2">
 										<ul class="filter-nav">
 											<li>
 												<label class="cont-checkbox">8 GB
@@ -697,13 +732,13 @@
 								<div class="card filter-tabs">
 									<div class="card-header filter-tabs" id="heading3">
 										<h5 class="mb-0">
-											<button class="btn colaps p-0" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+											<button class="btn colaps open p-0" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
 												RAM
 												<i class="fa-icon"></i>
 											</button>
 										</h5>
 									</div>
-									<div id="collapse3" class="collapse show" aria-labelledby="heading3" data-parent="#heading3">
+									<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#heading3">
 										<ul class="filter-nav">
 											<li>
 												<label class="cont-checkbox">2 GB
@@ -747,7 +782,7 @@
 											</button>
 										</h5>
 									</div>
-									<div id="collapse4" class="collapse show" aria-labelledby="heading4" data-parent="#heading4">
+									<div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#heading4">
 										
 									</div>
 								</div>
@@ -760,7 +795,7 @@
 											</button>
 										</h5>
 									</div>
-									<div id="collapse5" class="collapse show" aria-labelledby="heading5" data-parent="#heading5">
+									<div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#heading5">
 										
 									</div>
 								</div>
@@ -773,7 +808,7 @@
 											</button>
 										</h5>
 									</div>
-									<div id="collapse5" class="collapse show" aria-labelledby="heading6" data-parent="#heading6">
+									<div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#heading6">
 										
 									</div>
 								</div>
@@ -1004,7 +1039,7 @@
 						</div>
 						<div class="col-xl-9 col-lg-12 col-md-12">
 							<div class="row margin-block-product">
-								<div class="col-xl-9 col-lg-9 col-md-9">
+								<div class="col-xl-12 col-lg-12 col-md-12">
 									<nav class="tab-menu products-tabs">
 										<ul class="nav nav-tabs">
 											<li class="nav-item">
@@ -1018,8 +1053,6 @@
 											</li>
 										</ul>
 									</nav>
-								</div>
-								<div class="col-xl-3 col-lg-3 col-md-3 pr-0">
 									<div class="check-box">
 										<label class="cont-checkbox">Endirimdə
 											<input type="checkbox">
@@ -1049,7 +1082,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/discount-bubble.png">
+															<!--<img src="assets/img/icon/discount-bubble.png">-->
 															faizsiz hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1075,7 +1108,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1100,7 +1133,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1125,7 +1158,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1152,7 +1185,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/discount-bubble.png">
+															<!--<img src="assets/img/icon/discount-bubble.png">-->
 															faizsiz hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1178,7 +1211,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1203,7 +1236,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1228,7 +1261,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1255,7 +1288,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/discount-bubble.png">
+															<!--<img src="assets/img/icon/discount-bubble.png">-->
 															faizsiz hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1281,7 +1314,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1306,7 +1339,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1331,7 +1364,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1389,7 +1422,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/discount-bubble.png">
+															<!--<img src="assets/img/icon/discount-bubble.png">-->
 															faizsiz hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1415,7 +1448,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1440,7 +1473,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1465,7 +1498,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1492,7 +1525,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/discount-bubble.png">
+															<!--<img src="assets/img/icon/discount-bubble.png">-->
 															faizsiz hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1518,7 +1551,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1543,7 +1576,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1568,7 +1601,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1595,7 +1628,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/discount-bubble.png">
+															<!--<img src="assets/img/icon/discount-bubble.png">-->
 															faizsiz hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1621,7 +1654,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1646,7 +1679,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>
@@ -1671,7 +1704,7 @@
 															<span style="font-size: 1rem;display: inline-block">656 ₼ x 12 ay</span>
 														</span>
 														<p class="faizsiz">
-															<img src="assets/img/icon/shape.png">
+															<!--<img src="assets/img/icon/shape.png">-->
 															hissə-hissə ödəniş
 														</p>
 													</div>

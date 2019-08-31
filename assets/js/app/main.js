@@ -5,6 +5,8 @@
  - Author:   Emin Azeroglu
  */
 
+var filter_flag = 1;
+
 $(window).resize(function() {
     var width = $(window).width();
     if(width > 1200) {   
@@ -153,21 +155,28 @@ $ ( function () {
             }
         }
     });
-    
+    /*
    if ($(window).width() <= '1200'){
-        $('.collapse').collapse('hide');
+         $('.collapse').removeClass('show');
         flag = 1;
     } else {
-        $('.collapse').collapse('show');
+        $('.collapse').addClass('show');
         flag = 0;
-    }
-
+    }*/
     function windowSize(){
+        /*
         if ($(window).width() <= '1200'){
-            $('.collapse').collapse('hide');
+            $('.collapse').removeClass('show');
         }else {
-            $('.collapse').collapse('show');
+            $('.collapse').addClass('show');
+        }*/
+
+        if ($(window).width() <= '1200'){
+            $('#accordion').attr("data-default", '0');
+        } else {
+            $('#accordion').attr("data-default", '1');
         }
+
         if ($(window).width() > '994') {
             $('.menu').animate({ //выбираем класс menu и метод animate
 
@@ -176,13 +185,6 @@ $ ( function () {
             }, 200); //скорость движения меню в мс
         }
     }
-    /*
-    document.addEventListener('touchstart', function() {
-        $(".price-input").click(function(){
-            $(this).parents('.collapse').collapse('show');
-        });
-    }, false);
-    */
 
     $(window).on('load resize',windowSize);
     
